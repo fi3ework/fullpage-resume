@@ -7,7 +7,14 @@
     <meta name="keyword" content="Wee Wee简历">
     <meta name="description" content="Wee简历">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="lib/jquery.fullpage.min.css" />
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.7/dist/jquery.fullpage.min.css" as="style" />
+    <link rel="preload" href="css/main.css" as="style" />
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" as="script"/>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.7/dist/jquery.fullpage.min.js" as="script"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.7/dist/jquery.fullpage.min.css" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -20,12 +27,20 @@
                 <div class="title">前端工程师</div>
             </div>
             <ul class="contacts">
+                <!-- github -->
                 <a class="contact" target="_black" href="//github.com/fi3ework"><span class="iconfont-resume icon-github"></span></a>
+                <!-- juejin -->
                 
-                <a class="contact" target="_black" href="//juejin.im/user/56417d1e00b0bf378b7297ea"><span class="iconfont-resume icon-juejin"></span></a>
+                    <a class="contact" target="_black" href="//juejin.im/user/56417d1e00b0bf378b7297ea"><span class="iconfont-resume icon-juejin"></span></a>
                 
+                <!-- wechat -->
                 <a class="contact"><span class="iconfont-resume icon-wechat"><span class="wechat"></span></span></a>
-                <a class="contact" href="mailto:2374175164@qq.com"><span class="iconfont-resume icon-email"></span></a>
+                <!-- tele -->
+                
+                    <a class="contact" target="_black" href="tel:185xxxxoooo"><span class="iconfont-resume icon-tele"></span></a>
+                
+                <!-- email -->
+                <a class="contact" href="mailto:805843200@qq.com"><span class="iconfont-resume icon-email"><span class="email">805843200@qq.com</span></span></a>
             </ul>
             <span class="pdf"><a href="assets/resume.pdf" target="_blank">WEIWEI_RESUME.pdf</a></span>
         </div>
@@ -57,8 +72,8 @@
                     <div class="target-border">
                         <div class="target-dot"></div>
                     </div>
-                    <span class="company">xx公司</span>
-                    <span class="title">xx工程师</span>
+                    <span class="company">😶😐😑公司</span>
+                    <span class="title">图像算法工程师</span>
                     <time>2017.3 - 至今</time>
                     <div class="tech-stack">C++,OpenCV</div>
                     <ul class="description">
@@ -86,9 +101,9 @@
                     <div class="tech-stack">gulp sass</div>
                     <ul class="description">
                         
-                          <li>嚯嚯嚯嚯 嚯嚯嚯嚯</li>
+                          <li>Lorem ipsum dolor sit amet, offendit referrentur ad vix, his id lucilius partiendo.</li>
                         
-                          <li>活活活活 活活活活</li>
+                          <li>In populo aperiri eum, eam te suas consul scaevola, eam ut mollis partiendo definitionem.</li>
                         
                     </ul>
                 </li>
@@ -102,9 +117,9 @@
                     <div class="tech-stack">react redux react-router antd</div>
                     <ul class="description">
                         
-                          <li>哼哼哈嘿 哼哼哈嘿</li>
+                          <li>Pro accumsan oportere eu, dicta eruditi dissentiet eu quo. Pri id postea aperiri eloquentiam.</li>
                         
-                          <li>鸡排饭加个蛋</li>
+                          <li>Quem salutatus an ius, id erat aliquid per. Ullum copiosae comprehensam ne pri, id libris alienum pro.</li>
                         
                     </ul>
                 </li>
@@ -135,9 +150,9 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-    crossorigin="anonymous"></script>
-    <script src="lib/jquery.fullpage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.7/dist/jquery.fullpage.min.js"></script>
     <script>
         $(document).ready(function () {
             $('#fullpage').fullpage({

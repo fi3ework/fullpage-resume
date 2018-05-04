@@ -8,10 +8,16 @@
 
 1. npm install
 2. 修改 _config.yml
-3. 命令行中执行 gulp build
-4. 代码已近打包在 dist 中
+3. 命令行中执行 npm run build
+4. 静态页面已近打包在 dist 中
+
+## 使用
+
+
 
 ## 配置
+
+以下是 DEMO 中的配置
 
 ```yaml
 # overall
