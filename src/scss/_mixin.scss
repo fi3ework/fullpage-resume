@@ -1,0 +1,24 @@
+@mixin hidden-card {
+  position: absolute;
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0;
+  // height: 0;
+  pointer-events: none;
+  transform: translate(-50%, -90%);
+  transition-property: opacity, transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+  border: 0.1rem solid #333;
+  background-color: #333;
+  border-radius: 4px;
+  font-family: monospace, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+  left: 50%;
+  top: -0.5rem;
+}
+
+@mixin hover-card {
+  opacity: 1;
+  transform: translate(-50%, -100%);
+}

@@ -1,0 +1,41 @@
+{
+  "name": "fullpage-resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.config.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fi3ework/resume.git"
+  },
+  "keywords": [
+    "resume",
+    "fullpage"
+  ],
+  "author": "fi3ework",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fi3ework/resume/issues"
+  },
+  "homepage": "https://github.com/fi3ework/resume#readme",
+  "dependencies": {
+    "browser-sync": "^2.24.2",
+    "ejs": "^2.5.9",
+    "fullpage.js": "^2.9.7",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-shell": "^0.6.5",
+    "js-yaml": "^3.11.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-alloy": "^1.4.2",
+    "node-sass": "^4.9.0"
+  }
+}

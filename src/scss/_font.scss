@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'iconfont-resume';
+  /* project id 651554 */
+  src: url('//at.alicdn.com/t/font_651554_t5qgvr81s5ze61or.eot');
+  src: url('//at.alicdn.com/t/font_651554_t5qgvr81s5ze61or.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_651554_t5qgvr81s5ze61or.woff') format('woff'), url('//at.alicdn.com/t/font_651554_t5qgvr81s5ze61or.ttf') format('truetype'), url('//at.alicdn.com/t/font_651554_t5qgvr81s5ze61or.svg#iconfont-resume') format('svg');
+}
+
+.iconfont-resume {
+  font-family: "iconfont-resume" !important;
+  font-size: 1rem;
+  font-weight: normal !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-wechat::before {
+  content: "\e61d";
+}
+
+.icon-email::before {
+  content: "\e64b";
+}
+
+.icon-github::before {
+  content: "\e719";
+}
+
+.icon-juejin::before {
+  content: "\e601";
+}
+
+.icon-tele::before {
+  content: "\e614";
+}

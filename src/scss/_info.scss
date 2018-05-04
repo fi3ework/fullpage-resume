@@ -1,0 +1,73 @@
+@import './_mixin.scss';
+.info {
+    .avatar {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        box-shadow: 0 2px 0.2rem 0rem rgba(0, 0, 0, 0.3);
+        margin: 1.5rem auto;
+        background: url('../assets/avatar.jpg') center;
+        background-size: cover;
+    }
+    .name {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: $yankees_blue;
+    }
+    .title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $gunmetal;
+        a {
+            font-size: 1rem;
+            font-weight: normal;
+            font-style: italic;
+            color: $silver;
+        }
+    }
+    .contacts {
+        color: $silver;
+        font-size: 1rem;
+        margin-top: 1rem;
+        .contact {
+            display: inline-block;
+            position: relative;
+            @media screen and (max-width: $screen-phone) {
+                margin-right: 0.5rem;
+            }
+        }
+        .icon-email {
+            .email {
+                @include hidden-card;
+                padding: 0 10px;
+                color: #fff;
+            }
+            &:hover {
+                .email {
+                    @include hover-card;
+                }
+            }
+        }
+        .icon-wechat {
+            .wechat {
+                @include hidden-card;
+                width: 4.5rem;
+                height: 4.5rem;
+                background: url("../assets/wechat.JPG") no-repeat;
+                background-size: cover;
+            }
+            &:hover {
+                .wechat {
+                    @include hover-card;
+                }
+            }
+        }
+    }
+    .pdf {
+        display: inline-block;
+        margin-top: 4rem;
+        font-size: .6rem;
+        color: $yankees_blue;
+        text-decoration: underline;
+    }
+}

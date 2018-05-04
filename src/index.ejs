@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang=zh-cmn-Hans>
+<head>
+    <meta charset="UTF-8">
+    <title><%- title %></title>
+    <meta name="author" content="<%- name %>">
+    <meta name="keyword" content="<%- name %> <%- name %>简历">
+    <meta name="description" content="<%- name %>简历">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="lib/jquery.fullpage.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="fullpage">
+        <!-- page 1 -->    
+        <div class="section info">
+            <div class="avatar"></div>
+            <div class="name-title">
+                <div class="name"><%- name %></div>
+                <div class="title"><%- introduce %></div>
+            </div>
+            <ul class="contacts">
+                <!-- github -->
+                <a class="contact" target="_black" href="<%- social.github %>"><span class="iconfont-resume icon-github"></span></a>
+                <!-- juejin -->
+                <% if(social.juejin) { %>
+                    <a class="contact" target="_black" href="<%- social.juejin %>"><span class="iconfont-resume icon-juejin"></span></a>
+                <% } %>
+                <!-- wechat -->
+                <a class="contact"><span class="iconfont-resume icon-wechat"><span class="wechat"></span></span></a>
+                <!-- tele -->
+                <% if(social.tele) { %>
+                    <a class="contact" target="_black" href="tel:<%- social.tele %>"><span class="iconfont-resume icon-tele"></span></a>
+                <% } %>
+                <!-- email -->
+                <a class="contact" href="mailto:<%- social.email %>"><span class="iconfont-resume icon-email"><span class="email"><%- social.email %></span></span></a>
+            </ul>
+            <span class="pdf"><%- pdf_name %></span>
+        </div>
+        <!-- page 2 -->
+        <div class="section education">
+            <h1><%- education.title %></h1>
+            <ul>
+              <% education.stages.forEach(function(stage) { %>
+                <li>
+                    <time><%- stage.time %></time>
+                    <div class="school"><%- stage.university %></div>
+                    <div class="major"><%- stage.major %></div>
+                </li>
+              <% }) %>
+            </ul>
+        </div>
+        <!-- page 3 -->
+        <div class="section experiences">
+            <h1><%- work_experience.title %></h1>
+            <ul class="works">
+                <% work_experience.stages.forEach(function(stage) { %>
+                  <li class="work">
+                    <div class="target-border">
+                        <div class="target-dot"></div>
+                    </div>
+                    <span class="company"><%- stage.company %></span>
+                    <span class="title"><%- stage.job_title %></span>
+                    <time><%- stage.time %></time>
+                    <div class="tech-stack"><%- stage.tech_stack %></div>
+                    <ul class="description">
+                        <% stage.description.forEach(function(descriptionItem) { %>
+                          <li><%- descriptionItem %></li>
+                        <% }) %>
+                    </ul>
+                </li>
+              <% }) %>
+            </ul>
+        </div>
+        <!-- page 4 -->
+        <div class="section opensource">
+            <h1><%- open_source.title %></h1>
+            <ul class="works">
+                <% open_source.works.forEach(function(work) { %>
+                  <li class="work">
+                    <div class="target-border">
+                        <div class="target-dot"></div>
+                    </div>
+                    <a target="_blank" href="<%- work.link %>" class="company"><%- work.name %><span class="iconfont-resume">&#xe600</span></a>
+                    <div class="abstract"><%- work.abstract %></div>
+                    <div class="tech-stack"><%- work.tech_stack %></div>
+                    <ul class="description">
+                        <% work.description.forEach(function(descriptionItem) { %>
+                          <li><%- descriptionItem %></li>
+                        <% }) %>
+                    </ul>
+                </li>
+              <% }) %>
+            </ul>
+        </div>
+        <!-- page 5 -->
+        <div class="section skills">
+            <h1><%- tech_stack.title %></h1>
+            <div class="skill-container">
+                <div>
+                    <% tech_stack.techs.forEach(function(techItem) { %>
+                      <span><%- techItem %></span>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>
+    <script src="lib/jquery.fullpage.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                navigation: true,
+                navigationPosition: "right",
+                continuousVertical: true,
+                dragAndMove: true,
+                afterRender: function(){
+                  setTimeout(function(){
+                  $('#fullpage').css('opacity', 1)
+                  })
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
