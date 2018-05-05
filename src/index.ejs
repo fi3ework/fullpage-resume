@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title><%- title %></title>
     <meta name="author" content="<%- name %>">
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
     <meta name="keyword" content="<%- name %> <%- name %>简历">
     <meta name="description" content="<%- name %>简历">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,6 +14,8 @@
 
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" as="script"/>
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.7/dist/jquery.fullpage.min.js" as="script"/>
+
+    <link rel="preload" href="<%- social.wechat %>" as="image"/>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.7/dist/jquery.fullpage.min.css" />
     <link rel="stylesheet" href="css/main.css">
@@ -28,19 +31,35 @@
             </div>
             <ul class="contacts">
                 <!-- github -->
-                <a class="contact" target="_black" href="<%- social.github %>"><span class="iconfont-resume icon-github"></span></a>
+                <a class="contact" target="_black" href="<%- social.github %>">
+                    <span class="iconfont-resume icon-github"></span>
+                </a>
                 <!-- juejin -->
                 <% if(social.juejin) { %>
-                    <a class="contact" target="_black" href="<%- social.juejin %>"><span class="iconfont-resume icon-juejin"></span></a>
+                    <a class="contact" target="_black" href="<%- social.juejin %>">
+                        <span class="iconfont-resume icon-juejin"></span>
+                    </a>
                 <% } %>
                 <!-- wechat -->
-                <a class="contact"><span class="iconfont-resume icon-wechat"><span class="wechat"></span></span></a>
+                <a class="contact">
+                    <span class="iconfont-resume icon-wechat">
+                        <img class="wechat" src="<%- social.wechat %>"/>
+                    </span>
+                </a>
                 <!-- tele -->
                 <% if(social.tele) { %>
-                    <a class="contact" target="_black" href="tel:<%- social.tele %>"><span class="iconfont-resume icon-tele"></span></a>
+                    <a class="contact" target="_black" href="tel:<%- social.tele %>">
+                        <span class="iconfont-resume icon-tele">
+                            <span class="tele"><%- social.tele %></span>
+                        </span>
+                    </a>
                 <% } %>
                 <!-- email -->
-                <a class="contact" href="mailto:<%- social.email %>"><span class="iconfont-resume icon-email"><span class="email"><%- social.email %></span></span></a>
+                <a class="contact" href="mailto:<%- social.email %>">
+                    <span class="iconfont-resume icon-email">
+                        <span class="email"><%- social.email %></span>
+                    </span>
+                </a>
             </ul>
             <span class="pdf"><%- pdf_name %></span>
         </div>

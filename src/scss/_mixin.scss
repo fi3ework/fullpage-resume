@@ -4,6 +4,7 @@
   font-size: 0.7rem;
   opacity: 0;
   // height: 0;
+  color: #fff;
   pointer-events: none;
   transform: translate(-50%, -90%);
   transition-property: opacity, transform;
@@ -21,4 +22,5 @@
 @mixin hover-card {
   opacity: 1;
   transform: translate(-50%, -100%);
+  height: auto;
 }

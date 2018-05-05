@@ -124,6 +124,7 @@ h1 {
     display: block;
     font-size: 0.7rem;
     opacity: 0;
+    color: #fff;
     pointer-events: none;
     transform: translate(-50%, -90%);
     transition-property: opacity, transform;
@@ -136,16 +137,40 @@ h1 {
     font-family: monospace, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
     left: 50%;
     top: -0.5rem;
-    padding: 0 10px;
-    color: #fff; }
+    padding: 0 0.5rem; }
   .info .contacts .icon-email:hover .email {
     opacity: 1;
-    transform: translate(-50%, -100%); }
+    transform: translate(-50%, -100%);
+    height: auto; }
+  .info .contacts .icon-tele .tele {
+    position: absolute;
+    display: block;
+    font-size: 0.7rem;
+    opacity: 0;
+    color: #fff;
+    pointer-events: none;
+    transform: translate(-50%, -90%);
+    transition-property: opacity, transform;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+    cursor: pointer;
+    border: 0.1rem solid #333;
+    background-color: #333;
+    border-radius: 4px;
+    font-family: monospace, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+    left: 50%;
+    top: -0.5rem;
+    padding: 0 1rem; }
+  .info .contacts .icon-tele:hover .tele {
+    opacity: 1;
+    transform: translate(-50%, -100%);
+    height: auto; }
   .info .contacts .icon-wechat .wechat {
     position: absolute;
     display: block;
     font-size: 0.7rem;
     opacity: 0;
+    color: #fff;
     pointer-events: none;
     transform: translate(-50%, -90%);
     transition-property: opacity, transform;
@@ -159,12 +184,11 @@ h1 {
     left: 50%;
     top: -0.5rem;
     width: 4.5rem;
-    height: 4.5rem;
-    background: url("../assets/wechat.JPG") no-repeat;
-    background-size: cover; }
+    height: 4.5rem; }
   .info .contacts .icon-wechat:hover .wechat {
     opacity: 1;
-    transform: translate(-50%, -100%); }
+    transform: translate(-50%, -100%);
+    height: auto; }
 
 .info .pdf {
   display: inline-block;

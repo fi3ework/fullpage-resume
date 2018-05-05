@@ -1,23 +1,32 @@
 # fullpage-resume
 
-用 fullpage 做的一款配置式的网页版简历，不用写代码，改配置即可~~（改一下，玩一年，装备不花一分钱）~~。
+用 fullpage 做的一款配置式的网页版简历，不用写代码，改配置即可 ~~改一下，玩一年，装备不花一分钱~~。
 
 **预览：[DEMO](http://firework.studio/fullpage-resume/)**
 
-## 安装
-
-1. npm install
-2. 修改 _config.yml
-3. 命令行中执行 npm run build
-4. 静态页面已近打包在 dist 中
-
 ## 使用
 
+1. npm i
+2. 修改  _config.yml 中的个人信息
+3. npm run build
+4. 静态页面已经打包在 dist 中
+5. 将静态页面放在 GitHub 上作展示等等
 
+## 开发
+
+1. npm i
+2. npm run dev
+
+项目使用的是 gulp + browsersync  + ejs，修改 ejs, scss,  _config.yml 都会自动刷新页面。
 
 ## 配置
 
-以下是 DEMO 中的配置
+以下是 DEMO 中的配置。
+
+- 目前就是这些内容，yml 中列表的部分可以随意继续添加。
+- 用文字表示的字段如果需要链接，可以使用 markdown 语法 `[]()` 添加链接，在页面中会自动转换为 `<a>` 链接。
+- social 目前里只有这些链接，不填写就不会也页面中显示，如果需要新的链接可以发 Issue。
+- 如果有任何使用问题欢迎发 Issue。
 
 ```yaml
 # overall
@@ -99,4 +108,4 @@ tech_stack:
 
 ## 致谢
 
-模板的简历修改自 [simonwoo/cv](https://github.com/simonwoo/cv) 😀
+模板的简历修改自 [simonwoo/cv](https://github.com/simonwoo/cv) ，感谢 😀

@@ -2,7 +2,7 @@ const gulp = require('gulp')
 const sass = require('gulp-sass')
 const shell = require('gulp-shell')
 const browserSync = require('browser-sync').create()
-
+const htmlmin = require('gulp-htmlmin')
 /* ========== develop ========== */
 
 // sass
@@ -48,7 +48,8 @@ gulp.task('dev', ['sass', 'ejs2html'], function () {
 /* ========== bulid ========== */
 gulp.task('html-prod', ['ejs2html'], function () {
   return gulp.src(['./src/index.html'])
-    .pipe(gulp.dest('./dist/'))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('./docs/'))
 })
 
 gulp.task('copy-lib', function () {
@@ -56,12 +57,12 @@ gulp.task('copy-lib', function () {
     './src/lib/jquery.fullpage.min.css',
     './src/lib/jquery.fullpage.min.js'
   ])
-    .pipe(gulp.dest('./dist/lib/'))
+    .pipe(gulp.dest('./docs/lib/'))
 
   gulp.src([
     './src/assets/**/*.*'
   ])
-    .pipe(gulp.dest('./dist/assets/'))
+    .pipe(gulp.dest('./docs/assets/'))
 })
 
 gulp.task('sass-prod', function () {
@@ -69,7 +70,7 @@ gulp.task('sass-prod', function () {
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
-    .pipe(gulp.dest('./dist/css/'))
+    .pipe(gulp.dest('./docs/css/'))
 })
 
 gulp.task('build', ['sass-prod', 'html-prod', 'copy-lib'])

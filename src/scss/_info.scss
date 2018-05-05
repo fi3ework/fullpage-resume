@@ -39,11 +39,21 @@
         .icon-email {
             .email {
                 @include hidden-card;
-                padding: 0 10px;
-                color: #fff;
+                padding: 0 0.5rem;
             }
             &:hover {
                 .email {
+                    @include hover-card;
+                }
+            }
+        }
+        .icon-tele {
+            .tele {
+                @include hidden-card;
+                padding: 0 1rem;
+            }
+            &:hover {
+                .tele {
                     @include hover-card;
                 }
             }
@@ -53,8 +63,6 @@
                 @include hidden-card;
                 width: 4.5rem;
                 height: 4.5rem;
-                background: url("../assets/wechat.JPG") no-repeat;
-                background-size: cover;
             }
             &:hover {
                 .wechat {
