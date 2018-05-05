@@ -49,7 +49,7 @@ gulp.task('dev', ['sass', 'ejs2html'], function () {
 gulp.task('html-prod', ['ejs2html'], function () {
   return gulp.src(['./src/index.html'])
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('./docs/'))
+    .pipe(gulp.dest('./dist/'))
 })
 
 gulp.task('copy-lib', function () {
@@ -57,12 +57,12 @@ gulp.task('copy-lib', function () {
     './src/lib/jquery.fullpage.min.css',
     './src/lib/jquery.fullpage.min.js'
   ])
-    .pipe(gulp.dest('./docs/lib/'))
+    .pipe(gulp.dest('./dist/lib/'))
 
   gulp.src([
     './src/assets/**/*.*'
   ])
-    .pipe(gulp.dest('./docs/assets/'))
+    .pipe(gulp.dest('./dist/assets/'))
 })
 
 gulp.task('sass-prod', function () {
@@ -70,7 +70,7 @@ gulp.task('sass-prod', function () {
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
-    .pipe(gulp.dest('./docs/css/'))
+    .pipe(gulp.dest('./dist/css/'))
 })
 
 gulp.task('build', ['sass-prod', 'html-prod', 'copy-lib'])
